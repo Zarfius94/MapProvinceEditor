@@ -4,9 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.file.Files;
-import java.nio.file.OpenOption;
 import java.nio.file.Path;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
@@ -16,6 +14,14 @@ import java.util.List;
 import imageMapping.helper.BitmapImage;
 import imageMapping.helper.ProvinceInformation;
 
+/**
+ * Maps the different provinces to the actual location on the map and the coordinates on the map to the provinces.
+ * 
+ * Also the id color combination gets mapped.
+ * @author Zarfius
+ * @version 1.0
+ *
+ */
 public class Mapper {
 
 	private BufferedImage provinces;
@@ -83,6 +89,10 @@ public class Mapper {
 		}
 	}
 
+	/**
+	 * Generates a text file in which every province id is shown with their color, name if exists and the coordinates on the actual map.
+	 * @param output directory for the file to be written to.
+	 */
 	public void output(Path output) {
 		System.out.println("Start output generation:");
 		File file = new File(output.toFile(), "output");
