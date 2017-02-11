@@ -10,8 +10,25 @@ import com.opencsv.CSVReader;
 
 import imageMapping.helper.ProvinceInformation;
 
+/**
+ * Reads the province information from the file into the program.
+ * 
+ * @author Zarfius
+ * @version 1.0
+ *
+ */
 public class ProvincesReader {
 
+	/**
+	 * Get the information from the file into the program.
+	 * 
+	 * @param path
+	 *            path to the province file.
+	 * @param ProvinceNumbers
+	 *            amount of provinces. This information is critical as the file can have more id color combinations set
+	 *            than provinces are set.
+	 * @return an array of the province information.
+	 */
 	public static ProvinceInformation[] readProvinces(Path path, int ProvinceNumbers) {
 		CSVReader reader;
 		List<String[]> readerList = null;

@@ -15,6 +15,12 @@ import java.util.regex.Pattern;
 
 import imageMapping.helper.Tuple;
 
+/**
+ * Handles the various files needed to successfully run the map in game.
+ * @author Zarfius
+ * @version 1.0
+ *
+ */
 public class IoHandler {
 
 	private File mapDefault;
@@ -47,6 +53,10 @@ public class IoHandler {
 	private List<List<Integer>> ocean = new LinkedList<List<Integer>>();
 	private List<String> missingFiles;
 
+	/**
+	 * Creates a new handler for the given path.
+	 * @param mapfolder path to the directory the files are in.
+	 */
 	public IoHandler(Path mapfolder) {
 		if(mapfolder == null){
 			throw new IllegalArgumentException("Path is needed");
@@ -65,7 +75,7 @@ public class IoHandler {
 	}
 
 	/*
-	 * Use this methode only when you have validated default.map exists and is set to the variable.
+	 * Use this method only when you have validated default.map exists and is set to the variable.
 	 */
 	private void evaluateDefault(Path mapfolder) {
 		if (mapDefault == null) {

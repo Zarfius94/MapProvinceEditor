@@ -2,7 +2,7 @@ package imageMapping.helper;
 
 /**
  * Simple class to combine two classes in one.
- * @author Ziegler
+ * @author Zarfius
  *
  * @param <X> first class
  * @param <Y> second class

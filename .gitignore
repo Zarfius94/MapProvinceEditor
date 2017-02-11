@@ -3,4 +3,5 @@
 .classpath
 /.settings/
 /target/
-.idea
+.ide
+/src/test/

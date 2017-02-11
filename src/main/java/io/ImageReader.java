@@ -6,6 +6,11 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * IO Operations for specific images.
+ * @author Zarfius
+ * @version 1.0
+ */
 public class ImageReader {
 
 	/**
