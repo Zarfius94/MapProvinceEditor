@@ -1,4 +1,4 @@
-package io;
+package io.input;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -21,7 +21,7 @@ import imageMapping.helper.Tuple;
  * @version 1.0
  *
  */
-public class IoHandler {
+public class InputHandler {
 
 	private File mapDefault;
 
@@ -57,7 +57,7 @@ public class IoHandler {
 	 * Creates a new handler for the given path.
 	 * @param mapfolder path to the directory the files are in.
 	 */
-	public IoHandler(Path mapfolder) {
+	public InputHandler(Path mapfolder) {
 		if(mapfolder == null){
 			throw new IllegalArgumentException("Path is needed");
 		} else {

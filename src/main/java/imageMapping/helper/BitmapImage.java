@@ -3,7 +3,7 @@ package imageMapping.helper;
 import java.awt.image.BufferedImage;
 import java.nio.file.Path;
 
-import io.ImageReader;
+import io.input.ImageReader;
 
 /**
  * Bitmap wrapper.

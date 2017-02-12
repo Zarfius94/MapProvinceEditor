@@ -5,8 +5,8 @@ import java.io.File;
 import imageMapping.Mapper;
 import imageMapping.helper.BitmapImage;
 import imageMapping.helper.ProvinceInformation;
-import io.IoHandler;
-import io.ProvincesReader;
+import io.input.InputHandler;
+import io.input.ProvincesReader;
 
 public class Main {
 
@@ -16,7 +16,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		File f = new File(mapfolder);
-		IoHandler ih = new IoHandler(f.toPath());
+		InputHandler ih = new InputHandler(f.toPath());
 		ProvinceInformation[] pia = ProvincesReader.readProvinces(ih.getCsvDefinition().toPath(), ih.getMaxProvinces());
 		BitmapImage bi = BitmapImage.instance(ih.getBmpProvinces().toPath());
 		Mapper mapper = new Mapper(bi, pia);

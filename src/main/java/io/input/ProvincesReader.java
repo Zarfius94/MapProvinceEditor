@@ -1,4 +1,4 @@
-package io;
+package io.input;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -39,7 +39,7 @@ public class ProvincesReader {
 			System.err.println("No file found on " + path.toAbsolutePath().toString());
 			e.printStackTrace();
 		} catch (IOException e) {
-			System.err.println("Reading the file cause an error.");
+			System.err.println("Reading the file caused an error.");
 			e.printStackTrace();
 		}
 		ProvinceInformation[] ret = null;

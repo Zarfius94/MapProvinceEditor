@@ -94,6 +94,20 @@ public class ProvinceInformation {
 		return this.name;
 	}
 	
+	/**
+	 * returns the name of the province. But if there is no name it returns an 'x';
+	 * @return name of the province
+	 */
+	public String getNameCsv() {
+		if(this.name.isEmpty()) {
+			return "x";
+		} else return this.getName();
+	}
+	
+	public void changeName(String name) {
+		this.name = name;
+	}
+	
 	@Override
 	public String toString() {
 		String s = "Province Id: " + this.id +", color: " + Integer.toHexString(this.colorRGB) + ", name: " + name;
@@ -105,4 +119,6 @@ public class ProvinceInformation {
 		}
 		return s;
 	}
+	
+	// TODO extend the stored informations so that all files can be generated from it.
 }
