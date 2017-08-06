@@ -1,18 +1,30 @@
 package titles;
 
+/**
+ * Representation of a title.
+ * @author Zarfius
+ *
+ */
 public class Title {
 
 	private TitleRank rank;
 	private String name;
 	private Title liege;
 	private String id;
+	// private Character holder;
 
+	/**
+	 * Create a new title
+	 * @param rank Rank of the title
+	 * @param name name of the title
+	 * @param liege liege of the title. Note that baronies need a liege and emperors cannot have one. 
+	 */
 	public Title(TitleRank rank, String name, Title liege) {
 		if (liege != null) {
 			if (liege.getRank().compareTo(rank) < 1) {
-				throw new IllegalArgumentException("Liege rank must be higher than the own rank");
+				throw new IllegalArgumentException("Liege rank needs to be higher than the own rank");
 			}
-		} else if(rank == TitleRank.BARONY) {
+		} else if (rank == TitleRank.BARONY) {
 			throw new IllegalArgumentException("Baronies always need a liege");
 		}
 		this.rank = rank;
@@ -47,5 +59,5 @@ public class Title {
 	public final String getName() {
 		return name;
 	}
-	
+
 }

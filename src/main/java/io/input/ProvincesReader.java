@@ -30,10 +30,8 @@ public class ProvincesReader {
 	 * @return an array of the province information.
 	 */
 	public static ProvinceInformation[] readProvinces(Path path, int ProvinceNumbers) {
-		CSVReader reader;
 		List<String[]> readerList = null;
-		try {
-			reader = new CSVReader(new FileReader(path.toFile()), ';');
+		try(CSVReader reader = new CSVReader(new FileReader(path.toFile()), ';')) {
 			readerList = reader.readAll();
 		} catch (FileNotFoundException e) {
 			System.err.println("No file found on " + path.toAbsolutePath().toString());

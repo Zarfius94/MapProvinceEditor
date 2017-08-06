@@ -59,11 +59,14 @@ public class Mapper {
 			}
 
 		}
-		// list for unknown colors that may appear (small failsafe)
+		// list for unknown colors that may appear (small fail safe)
 		this.unknownColors = new ArrayList<ProvinceInformation>();
 		this.map();
 	}
 
+	/*
+	 * extract the provinces through the color in the image and save the coordinates for them.
+	 */
 	private void map() {
 		int height = provinces.getHeight();
 		int width = provinces.getWidth();
