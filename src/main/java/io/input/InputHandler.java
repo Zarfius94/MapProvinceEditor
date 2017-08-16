@@ -213,7 +213,7 @@ public class InputHandler {
 						ocean.add(tl);
 						break;
 					default:
-						System.out.println(stra[0] + stra[1]);
+						System.out.println("Not matched" + stra[0] + stra[1]);
 						break;
 					}
 				}
